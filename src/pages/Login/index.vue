@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { defineComponent, reactive } from 'vue'
+import { defineComponent } from 'vue'
 export default defineComponent({
   data() {
     return {
@@ -71,10 +71,14 @@ export default defineComponent({
   created() {},
   methods: {
     onFinish(values) {
-      this.$api.user.login(values).then((res) => {
-        console.log('res', res)
-
+      const params = {
+        name: values.account,
+        password: values.password
+      }
+      this.$api.user.login(params).then((res, reject) => {
+        const url = `https://workspace.easyv.cloud/shareScreen/eyJzY3JlZW5JZCI6ODcxNTA4fQ==?token=${res.token}`
         this.$message.success('登录成功')
+        window.open(url, '_blank')
       })
     }
   }
