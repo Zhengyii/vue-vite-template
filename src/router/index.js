@@ -5,7 +5,7 @@ import {
 } from 'vue-router'
 import LoginLayout from '@/layouts/login-layout.vue'
 
-const routerHistory = createWebHashHistory()
+const routerHistory = createWebHistory()
 // createWebHashHistory hash 路由
 // createWebHistory history 路由
 // createMemoryHistory 带缓存 history 路由
