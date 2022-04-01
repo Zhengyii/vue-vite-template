@@ -1,10 +1,10 @@
 import axios from 'axios'
 import Qs from 'qs'
 import { compose } from 'ramda'
-import Router from '../router'
+import Router from '@/router'
 // import UUID from "uuid-js";
 // import md5 from "js-md5";
-import store from '../store'
+import store from '@/store'
 import { message } from 'ant-design-vue'
 
 const service = axios.create({

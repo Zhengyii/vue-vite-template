@@ -3,7 +3,7 @@ import {
   createWebHistory,
   createWebHashHistory
 } from 'vue-router'
-import LoginLayout from '../layouts/login-layout.vue'
+import LoginLayout from '@/layouts/login-layout.vue'
 
 const routerHistory = createWebHashHistory()
 // createWebHashHistory hash 路由

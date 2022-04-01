@@ -68,7 +68,9 @@ export default defineComponent({
       }
     }
   },
-  created() {},
+  created() {
+    // console.log('1111', import.meta.env.MODE)
+  },
   methods: {
     onFinish(values) {
       const params = {
